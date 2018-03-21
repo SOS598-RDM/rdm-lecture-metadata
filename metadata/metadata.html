@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>metadata, and data publishing</title>
+    <meta charset="utf-8">
+    <meta name="date" content="2018-03-23" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# metadata, and data publishing
+### 2018-03-23
+
+---
+
+
+
+
+
+# why publish data
+
+* big picture
+  + increasingly a requirement
+  + advancement of science
+  
+* researcher perspective
+  + papers with publicly available data receive a higher number of citations than similar studies lacking available data&lt;sup&gt;1&lt;/sup&gt;
+  + data sharing is associated with higher productivity&lt;sup&gt;1&lt;/sup&gt;
+  + &lt;a href="https://portal.lternet.edu/nis/mapbrowse?packageid=knb-lter-cap.621.1" target="_blank"&gt;a citeable product&lt;/a&gt;
+  
+.footnote[Marwick et al. 2017. https://doi.org/10.7287/peerj.preprints.3192v1]
+
+---
+
+.center[
+
+  &lt;img src="metadata_files/figure-html/ClimateGate.png" width="50%"&gt;
+  
+  "The climate scientists at the centre of a media storm over leaked emails were yesterday cleared of accusations that they fudged their results and silenced critics, but a review found they had failed to be open enough about their work."
+]
+
+.footnote[https://nceas.github.io/crescynt-training/]
+
+
+---
+
+# concerns about sharing data
+
+most common concerns can be easily addressed *with metadata*
+
+.pull-left[
+.center[**concern**]
+
+&lt;hr&gt;
+
+* inappropriate use due to misunderstanding of research purpose or parameters
+
+* security and confidentiality of sensitive data
+
+* lack of acknowledgement / credit
+
+]
+
+.pull-right[
+.center[**solution**]
+
+&lt;hr&gt;
+
+* provide rich abstract, purpose, use constraints, and supplemental information
+
+* use constraints to specify who may access the data and how
+
+* specify a required data citation within the use constraints
+
+]
+
+.footnote[https://www.dataone.org/education-modules]
+
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+**"Without clear instructions, many researchers struggle to avoid chaos in their file structures, and so are understandably reluctant to expose their workflow for others to see.  This may be one of the reasons that so many requests for details about method, including requests for data and code, are turned down or go unanswered (Collberg &amp; Proebsting 2016)."**
+
+.footnote[Marwick et al. 2017. https://doi.org/10.7287/peerj.preprints.3192v1]
+
+
+---
+
+# what do we mean by data repository?
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; system &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; long.term &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; versioned &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; citable &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; discoverable &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Google Drive &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; maybe &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; maybe &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; no &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; no &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; GitHub &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; yes &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; yes &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; no &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; no &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; University Server &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; maybe &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; no &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; no &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; maybe &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; KNB &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; yes &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; yes &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; yes &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; yes &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+.footnote[https://nceas.github.io/crescynt-training/]
+
+
+---
+
+# where to publish?
+
+.center[
+&lt;img src="metadata_files/figure-html/r3data.png" width="70%"&gt;
+]
+
+totally awesome but a journal may guide you, and I would start first with lab, colleagues, at conferences
+
+
+---
+
+# data standards: there are a lot
+
+&lt;img src="metadata_files/figure-html/metadata_standards_list.png" width="100%"&gt;
+
+
+---
+
+# data standards: what is a standard?
+
+standards provides a structure to describe data with:
+- common terms to allow consistency between records
+- common definitions for easier interpretation
+- common language for ease of communication
+- common structure to quickly locate information
+
+in search and retrieval, standards provide:
+- documentation structure in a reliable and predictable format for computer interpretation
+- a uniform summary description of the dataset
+
+&lt;p style="color:#00BFFF"&gt;...like a blueprint for the structure of information&lt;/p&gt;
+
+.footnote[https://www.dataone.org/education-modules]
+
+
+---
+
+# xml structure
+
+```xml
+&lt;attribute&gt;
+  &lt;attributeName&gt;stem_diameter&lt;/attributeName&gt;
+  &lt;attributeDefinition&gt;stem diameter&lt;/attributeDefinition&gt;
+  &lt;storageType&gt;float&lt;/storageType&gt;
+  &lt;measurementScale&gt;
+    &lt;ratio&gt;
+      &lt;unit&gt;
+        &lt;standardUnit&gt;centimeter&lt;/standardUnit&gt;
+      &lt;/unit&gt;
+      &lt;numericDomain&gt;
+        &lt;numberType&gt;real&lt;/numberType&gt;
+      &lt;/numericDomain&gt;
+    &lt;/ratio&gt;
+  &lt;/measurementScale&gt;
+  &lt;missingValueCode&gt;
+    &lt;code&gt;NA&lt;/code&gt;
+    &lt;codeExplanation&gt;missing value&lt;/codeExplanation&gt;
+  &lt;/missingValueCode&gt;
+&lt;/attribute&gt;
+```
+
+
+---
+
+# the who, what, why, where, when
+
+- principal investigator
+- funding sources
+- data collector/producer
+- project description
+- sample and sampling procedures
+- weighting
+- substantive, temporal, and geographic coverage of the data collection
+- data source(s)
+- unit(s) of analysis/observation
+- variables
+- technical information on files
+- data collection instruments
+
+.footnote[adapted from ICPSR by Brianna Marshall from Metadata for Research Data]
+
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+**"data without the contextual information needed to interpret it (and ultimately reproduce the results) is useless"**
+
+.footnote[from Metadata for Research Data by Brianna Marshall]
+
+
+---
+
+# what makes good metatadata?
+
+- consistency with commonly used fields, e.g., YYYY-MM-DD
+- use a standard vocubulary
+- spell out acronyms
+- provide all the critical information for: &lt;i&gt;identification; entities and attributes; data quality; data lineage; access, use, and liability constraints; accessing the data; spatial referencewriting quality metadata&lt;/i&gt;
+- complete title: who, what, when, where, and scale
+- be specific, and quantify where possible
+- use descriptive and clear writing
+- fully document geographic locations
+- use keywords wisely (use a thesausus when possible)
+- detail, there is no such thing as too much!
+- remember that a computer will read this:
+  + avoid special characters
+  + avoid tabs, indents, carriage returns
+  + copy from a text editor (not a word processor)
+
+
+.footnote[https://www.dataone.org/education-modules]
+
+---
+
+# a special note about titles
+
+&lt;img src="metadata_files/figure-html/recently_added_titles.png" width="100%"&gt;
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
