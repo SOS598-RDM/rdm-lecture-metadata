@@ -230,3 +230,14 @@ in search and retrieval, standards provide:
 # a special note about titles
 
 <img src="metadata_files/figure-html/recently_added_titles.png" width="100%">
+
+
+---
+
+# orcid
+
+.center[
+<img src="metadata_files/figure-html/orcid.png" width="50%">
+]
+
+[orcid.org](https://orcid.org/)
