@@ -35,11 +35,13 @@ class: center, middle, inverse, title-slide
 
 ---
 
-.center[
+.pull-left[
+  &lt;img src="metadata_files/figure-html/ClimateGate.png" width="100%"&gt;
+]
 
-  &lt;img src="metadata_files/figure-html/ClimateGate.png" width="50%"&gt;
-  
-  "The climate scientists at the centre of a media storm over leaked emails were yesterday cleared of accusations that they fudged their results and silenced critics, but a review found they had failed to be open enough about their work."
+.pull-right[
+
+"The climate scientists at the centre of a media storm over leaked emails were yesterday cleared of accusations that they fudged their results and silenced critics, but a review found they had failed to be open enough about their work."
 ]
 
 .footnote[https://nceas.github.io/crescynt-training/]
@@ -49,7 +51,7 @@ class: center, middle, inverse, title-slide
 
 # concerns about sharing data
 
-most common concerns can be easily addressed *with metadata*
+most common concerns can be addressed *with metadata*
 
 .pull-left[
 .center[**concern**]
@@ -128,7 +130,7 @@ most common concerns can be easily addressed *with metadata*
    &lt;td style="text-align:left;"&gt; maybe &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; KNB &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; KNB* &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; yes &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; yes &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; yes &lt;/td&gt;
@@ -137,6 +139,9 @@ most common concerns can be easily addressed *with metadata*
 &lt;/tbody&gt;
 &lt;/table&gt;
 
+&lt;small&gt;
+  *KNB (the Knowledge Network for Biocomplexity) is an international repository intended to facilitate ecological and environmental research
+&lt;/small&gt;
 
 .footnote[https://nceas.github.io/crescynt-training/]
 
@@ -146,11 +151,12 @@ most common concerns can be easily addressed *with metadata*
 # where to publish?
 
 .center[
-&lt;img src="metadata_files/figure-html/r3data.png" width="70%"&gt;
+&lt;img src="metadata_files/figure-html/r3data.png" width="60%"&gt;
 ]
 
-totally awesome but a journal may guide you, and I would start first with lab, colleagues, at conferences
-
+is awesome but I would start with...
+* institutional resources
+* lab, colleagues, at conferences
 
 ---
 
@@ -173,14 +179,61 @@ in search and retrieval, standards provide:
 - documentation structure in a reliable and predictable format for computer interpretation
 - a uniform summary description of the dataset
 
-&lt;p style="color:#00BFFF"&gt;...like a blueprint for the structure of information&lt;/p&gt;
+&lt;!-- &lt;p style="color:#00BFFF"&gt;...like a blueprint for the structure of information&lt;/p&gt; --&gt;
 
 .footnote[https://www.dataone.org/education-modules]
 
 
 ---
 
-# xml structure
+# data standards: a blueprint
+
+*example for a house*
+
+.pull-left[
+
+house:&lt;br&gt;
+&amp;nbsp;parcel_number:&lt;br&gt;
+&amp;nbsp;roof:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;type: shingle, shake, tile&lt;br&gt;
+&amp;nbsp;&amp;nbsp;color:&lt;br&gt;
+&amp;nbsp;wall:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;exterior_wall:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;type: block, vinyl, stucco&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;color:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;interior_wall:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;color:&lt;br&gt;
+
+]
+
+.pull-right[
+
+```xml
+&lt;house&gt;
+  &lt;parcel_number&gt;45.658&lt;/parcel_number&gt;
+  &lt;roof&gt;
+    &lt;type&gt;tile&lt;/type&gt;
+    &lt;color&gt;rustic red&lt;/color&gt;
+  &lt;/roof&gt;
+  &lt;wall&gt;
+    &lt;exterior_wall&gt;
+      &lt;type&gt;block&lt;/type&gt;
+      &lt;color&gt;swiss coffee&lt;/color&gt;
+    &lt;/exterior_wall&gt;
+    &lt;interior_wall&gt;
+      &lt;color&gt;almond butter&lt;/color&gt;
+    &lt;/interior_wall&gt;
+ &lt;/wall&gt;
+&lt;/house&gt;
+```
+]
+
+
+---
+
+# data standards: a blueprint
+
+*example for ecological data*
 
 ```xml
 &lt;attribute&gt;
@@ -207,7 +260,7 @@ in search and retrieval, standards provide:
 
 ---
 
-# the who, what, why, where, when
+# metadata: the who, what, why, where, when
 
 - principal investigator
 - funding sources

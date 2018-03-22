@@ -32,11 +32,13 @@ options(htmltools.dir.version = FALSE)
 
 ---
 
-.center[
+.pull-left[
+  <img src="metadata_files/figure-html/ClimateGate.png" width="100%">
+]
 
-  <img src="metadata_files/figure-html/ClimateGate.png" width="50%">
-  
-  "The climate scientists at the centre of a media storm over leaked emails were yesterday cleared of accusations that they fudged their results and silenced critics, but a review found they had failed to be open enough about their work."
+.pull-right[
+
+"The climate scientists at the centre of a media storm over leaked emails were yesterday cleared of accusations that they fudged their results and silenced critics, but a review found they had failed to be open enough about their work."
 ]
 
 .footnote[https://nceas.github.io/crescynt-training/]
@@ -46,7 +48,7 @@ options(htmltools.dir.version = FALSE)
 
 # concerns about sharing data
 
-most common concerns can be easily addressed *with metadata*
+most common concerns can be addressed *with metadata*
 
 .pull-left[
 .center[**concern**]
@@ -94,7 +96,7 @@ most common concerns can be easily addressed *with metadata*
 
 ```{r echo=FALSE}
 dataRepo <- data.frame(
-  system = c("Google Drive", "GitHub", "University Server", "KNB"),
+  system = c("Google Drive", "GitHub", "University Server", "KNB*"),
   `long term` = c("maybe", "yes", "maybe", "yes"),
   versioned = c("maybe", "yes", "no", "yes"),
   citable = c("no", "no", "no", "yes"),
@@ -104,6 +106,9 @@ dataRepo <- data.frame(
 knitr::kable(dataRepo, format = "html")
 ```
 
+<small>
+  *KNB (the Knowledge Network for Biocomplexity) is an international repository intended to facilitate ecological and environmental research
+</small>
 
 .footnote[https://nceas.github.io/crescynt-training/]
 
@@ -113,11 +118,12 @@ knitr::kable(dataRepo, format = "html")
 # where to publish?
 
 .center[
-<img src="metadata_files/figure-html/r3data.png" width="70%">
+<img src="metadata_files/figure-html/r3data.png" width="60%">
 ]
 
-totally awesome but a journal may guide you, and I would start first with lab, colleagues, at conferences
-
+is awesome but I would start with...
+* institutional resources
+* lab, colleagues, at conferences
 
 ---
 
@@ -140,14 +146,61 @@ in search and retrieval, standards provide:
 - documentation structure in a reliable and predictable format for computer interpretation
 - a uniform summary description of the dataset
 
-<p style="color:#00BFFF">...like a blueprint for the structure of information</p>
+<!-- <p style="color:#00BFFF">...like a blueprint for the structure of information</p> -->
 
 .footnote[https://www.dataone.org/education-modules]
 
 
 ---
 
-# xml structure
+# data standards: a blueprint
+
+*example for a house*
+
+.pull-left[
+
+house:<br>
+&nbsp;parcel_number:<br>
+&nbsp;roof:<br>
+&nbsp;&nbsp;type: shingle, shake, tile<br>
+&nbsp;&nbsp;color:<br>
+&nbsp;wall:<br>
+&nbsp;&nbsp;exterior_wall:<br>
+&nbsp;&nbsp;&nbsp;type: block, vinyl, stucco<br>
+&nbsp;&nbsp;&nbsp;color:<br>
+&nbsp;&nbsp;interior_wall:<br>
+&nbsp;&nbsp;&nbsp;color:<br>
+
+]
+
+.pull-right[
+
+```xml
+<house>
+  <parcel_number>45.658</parcel_number>
+  <roof>
+    <type>tile</type>
+    <color>rustic red</color>
+  </roof>
+  <wall>
+    <exterior_wall>
+      <type>block</type>
+      <color>swiss coffee</color>
+    </exterior_wall>
+    <interior_wall>
+      <color>almond butter</color>
+    </interior_wall>
+ </wall>
+</house>
+```
+]
+
+
+---
+
+# data standards: a blueprint
+
+*example for ecological data*
 
 ```xml
 <attribute>
@@ -174,7 +227,7 @@ in search and retrieval, standards provide:
 
 ---
 
-# the who, what, why, where, when
+# metadata: the who, what, why, where, when
 
 - principal investigator
 - funding sources
