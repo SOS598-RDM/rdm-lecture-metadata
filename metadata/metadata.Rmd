@@ -28,7 +28,8 @@ options(htmltools.dir.version = FALSE)
   + data sharing is associated with higher productivity<sup>1</sup>
   + <a href="https://portal.lternet.edu/nis/mapbrowse?packageid=knb-lter-cap.621.1" target="_blank">a citeable product</a>
   
-.footnote[Marwick et al. 2017. https://doi.org/10.7287/peerj.preprints.3192v1]
+
+.footnote[<sup>1</sup>Marwick et al. 2017. https://doi.org/10.7287/peerj.preprints.3192v1]
 
 ---
 
@@ -123,18 +124,19 @@ knitr::kable(dataRepo, format = "html")
 
 is awesome but I would start with...
 * institutional resources
-* lab, colleagues, at conferences
+* lab, colleagues
+* conferences
 
 ---
 
-# data standards: there are a lot
+# metadata standards: there are a lot
 
 <img src="metadata_files/figure-html/metadata_standards_list.png" width="100%">
 
 
 ---
 
-# data standards: what is a standard?
+# metadata standards: what is a standard?
 
 standards provides a structure to describe data with:
 - common terms to allow consistency between records
@@ -153,7 +155,7 @@ in search and retrieval, standards provide:
 
 ---
 
-# data standards: a blueprint
+# metadata standards: a blueprint
 
 *example for a house*
 
@@ -198,7 +200,7 @@ house:<br>
 
 ---
 
-# data standards: a blueprint
+# metadata standards: a blueprint
 
 *example for ecological data*
 
@@ -263,7 +265,7 @@ house:<br>
 - consistency with commonly used fields, e.g., YYYY-MM-DD
 - use a standard vocubulary
 - spell out acronyms
-- provide all the critical information for: <i>identification; entities and attributes; data quality; data lineage; access, use, and liability constraints; accessing the data; spatial referencewriting quality metadata</i>
+- provide all the critical information for: *identification; entities and attributes; data quality; data lineage; access, use, and liability constraints; accessing the data; spatial reference*
 - complete title: who, what, when, where, and scale
 - be specific, and quantify where possible
 - use descriptive and clear writing
@@ -273,7 +275,7 @@ house:<br>
 - remember that a computer will read this:
   + avoid special characters
   + avoid tabs, indents, carriage returns
-  + copy from a text editor (not a word processor)
+  + copy from a text file (not a file with rich text like Word or RTF)
 
 
 .footnote[https://www.dataone.org/education-modules]
