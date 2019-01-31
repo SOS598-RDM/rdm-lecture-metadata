@@ -2,22 +2,18 @@
 title: "metadata, and data publishing"
 subtitle: FALSE
 author: FALSE
-date: "2018-03-23"
+date: "2019-04-05"
 output:
   xaringan::moon_reader:
     lib_dir: libs
+    css: ["default", "assets/my-theme.css", "libs/remark-css/default-fonts.css"]
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-```
-
-
-# why publish data
+#### why publish data
 
 * big picture
   + increasingly a requirement
@@ -29,12 +25,13 @@ options(htmltools.dir.version = FALSE)
   + <a href="https://portal.lternet.edu/nis/mapbrowse?packageid=knb-lter-cap.621.1" target="_blank">a citeable product</a>
   
 
-.footnote[<sup>1</sup>Marwick et al. 2017. https://doi.org/10.7287/peerj.preprints.3192v1]
+.footnote[<sup>1</sup>[Marwick et al. 2017](https://doi.org/10.7287/peerj.preprints.3192v1)]
+
 
 ---
 
 .pull-left[
-  <img src="metadata_files/figure-html/ClimateGate.png" width="100%">
+  <img src="assets/figures/ClimateGate.png" width="100%">
 ]
 
 .pull-right[
@@ -42,12 +39,12 @@ options(htmltools.dir.version = FALSE)
 "The climate scientists at the centre of a media storm over leaked emails were yesterday cleared of accusations that they fudged their results and silenced critics, but a review found they had failed to be open enough about their work."
 ]
 
-.footnote[https://nceas.github.io/crescynt-training/]
+.footnote[[NCEAS crescynt training](https://nceas.github.io/crescynt-training/)]
 
 
 ---
 
-# concerns about sharing data
+#### concerns about sharing data
 
 most common concerns can be addressed *with metadata*
 
@@ -77,7 +74,7 @@ most common concerns can be addressed *with metadata*
 
 ]
 
-.footnote[https://www.dataone.org/education-modules]
+.footnote[[DataONE](https://www.dataone.org/education-modules)]
 
 
 ---
@@ -88,12 +85,12 @@ most common concerns can be addressed *with metadata*
 
 **"Without clear instructions, many researchers struggle to avoid chaos in their file structures, and so are understandably reluctant to expose their workflow for others to see.  This may be one of the reasons that so many requests for details about method, including requests for data and code, are turned down or go unanswered (Collberg & Proebsting 2016)."**
 
-.footnote[Marwick et al. 2017. https://doi.org/10.7287/peerj.preprints.3192v1]
+.footnote[[Marwick et al. 2017](https://doi.org/10.7287/peerj.preprints.3192v1)]
 
 
 ---
 
-# what do we mean by data repository?
+#### what do we mean by data repository?
 
 ```{r echo=FALSE}
 dataRepo <- data.frame(
@@ -111,15 +108,15 @@ knitr::kable(dataRepo, format = "html")
   *KNB (the Knowledge Network for Biocomplexity) is an international repository intended to facilitate ecological and environmental research
 </small>
 
-.footnote[https://nceas.github.io/crescynt-training/]
+.footnote[[NCEAS crescynt training](https://nceas.github.io/crescynt-training/)]
 
 
 ---
 
-# where to publish?
+#### where to publish?
 
 .center[
-<img src="metadata_files/figure-html/r3data.png" width="60%">
+  <img src="assets/figures/r3data.png" width="60%">
 ]
 
 is awesome but I would start with...
@@ -127,16 +124,17 @@ is awesome but I would start with...
 * lab, colleagues
 * conferences
 
----
-
-# metadata standards: there are a lot
-
-<img src="metadata_files/figure-html/metadata_standards_list.png" width="100%">
-
 
 ---
 
-# metadata standards: what is a standard?
+#### metadata standards: there are a lot
+
+<img src="assets/figures/metadata_standards_list.png" width="100%">
+
+
+---
+
+#### metadata standards: what is a standard?
 
 standards provides a structure to describe data with:
 - common terms to allow consistency between records
@@ -150,12 +148,12 @@ in search and retrieval, standards provide:
 
 <!-- <p style="color:#00BFFF">...like a blueprint for the structure of information</p> -->
 
-.footnote[https://www.dataone.org/education-modules]
+.footnote[[DataONE](https://www.dataone.org/education-modules)]
 
 
 ---
 
-# metadata standards: a blueprint
+#### metadata standards: a blueprint
 
 *example for a house*
 
@@ -200,7 +198,7 @@ house:<br>
 
 ---
 
-# metadata standards: a blueprint
+#### metadata standards: a blueprint
 
 *example for ecological data*
 
@@ -229,7 +227,7 @@ house:<br>
 
 ---
 
-# metadata: the who, what, why, where, when
+#### metadata: the who, what, why, where, when
 
 - principal investigator
 - funding sources
@@ -260,7 +258,7 @@ house:<br>
 
 ---
 
-# what makes good metatadata?
+#### what makes good metatadata?
 
 - consistency with commonly used fields, e.g., YYYY-MM-DD
 - use a standard vocubulary
@@ -278,13 +276,14 @@ house:<br>
   + copy from a text file (not a file with rich text like Word or RTF)
 
 
-.footnote[https://www.dataone.org/education-modules]
+.footnote[[DataONE](https://www.dataone.org/education-modules)]
+
 
 ---
 
 # a special note about titles
 
-<img src="metadata_files/figure-html/recently_added_titles.png" width="100%">
+<img src="assets/figures/recently_added_titles.png" width="100%">
 
 
 ---
@@ -292,7 +291,7 @@ house:<br>
 # orcid
 
 .center[
-<img src="metadata_files/figure-html/orcid.png" width="50%">
+<img src="assets/figures/orcid.png" width="50%">
 ]
 
 [orcid.org](https://orcid.org/)
