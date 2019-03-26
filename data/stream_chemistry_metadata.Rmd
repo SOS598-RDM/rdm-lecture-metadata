@@ -1,23 +1,21 @@
 ---
 title: "generate metadata"
-output:
-  html_document:
-    df_print: paged
+output: github_document
 editor_options:
   chunk_output_type: console
 ---
 
 We will use the csvy package to add metadata to our stream chemistry data.
 
-```{r libraries, echo=FALSE}
+```{r libraries, message=FALSE}
 
 library(csvy)
 library(tidyverse)
 ```
 
-# iris data demo
+## Iris data demo
 
-First, let us see how this works with the iris data.
+First, let us see how this works with the `iris` data.
 
 ```{r iris_data_demo}
 
@@ -26,39 +24,51 @@ iris_subset <- head(iris) # we can use a small piece of iris for this demo
 
 # add attributes
 attr(iris_subset, "title") <- "the famous Iris data set" # add a title
-attr(iris_subset, "description") <- "stats about Iris (Iris spp.) plants" # add a description
+attr(iris_subset, "description") <- "measurements of Iris (Iris spp.) plants" # add a description
 attr(iris_subset, "format") <- "csvy" # add a (meta)data format
 ```
 
 
 How does our iris data set look (in R)?
 
+* with the str() function...
+
 ```{r iris_subset structure}
 
 str(iris_subset)
 ```
 
+*  with the attributes() function (note that we are exluding `row.names` from the output)...
 
-How does our iris data set look (outside of R)?
+```{r iris_subset attributes}
 
-```{r write_iris_csvy, echo=FALSE}
+attributes(iris_subset)[!names(attributes(iris_subset)) %in% c("row.names")]
+```
 
-write_csvy(iris_subset, '~/Desktop/iris_subset.csv', comment_header = F)
+How does our iris data set look outside of R?
+
+```{r write_iris_csvy}
+
+write_csvy(x = iris_subset,
+           file = '~/Desktop/iris_subset.csv',
+           comment_header = F)
 ```
 
 
-# Add metadata to our stream chemistry data
+## Add metadata to our stream chemistry data
 
 Import our stream chemistry data
 
-```{r import_chem_data, echo=FALSE}
+```{r import_chem_data, warning=FALSE}
 
-stream_chem <- read_csv('stream_chemistry_metabolism.csv') %>% 
+stream_chem <- read_csv(file = '/home/srearl/localRepos/rdm-lecture-metadata/data/stream_chemistry_metabolism.csv') %>% 
   mutate(Date = as.Date(Date, format = "%m/%d/%Y")) # fix date field on import
 ```
 
 
-Add metadata to our stream chemistry data. We can add table- and field-level attribute data. We can loosely follow the Frictionless Data Table schema: https://frictionlessdata.io/specs/table-schema/
+Add metadata to our stream chemistry data. We can add table- and field-level
+metadata. We can loosely follow the Frictionless Data Table schema:
+https://frictionlessdata.io/specs/table-schema/
 
 ```{r stream_chem_metadata}
 
@@ -80,17 +90,27 @@ attr(stream_chem$DO, "description") <- "stream water dissolved oxygen concentrat
 
 Review our stream chemistry metadata
 
-```{r review_stream_chem_metadata}
+* with the str() function...
+
+```{r stream_chem str}
 
 str(stream_chem)
-attributes(stream_chem)
 ```
 
+*  with the attributes() function (note that we are exluding `row.names` from the output)...
+
+```{r stream_chem attributes}
+
+attributes(stream_chem)[!names(attributes(stream_chem)) %in% c("row.names")]
+```
 
 Write our stream chemistry data as a csvy file with metadata.
 
-```{r write_stream_chem, echo=FALSE}
+```{r write_stream_chem}
 
-write_csvy(stream_chem, "~/Desktop/stream_chem.csv", comment_header = F, row.names = F)
+write_csvy(x = stream_chem, 
+           file = "~/Desktop/stream_chem.csv",
+           comment_header = F,
+           row.names = F)
 ```
 
