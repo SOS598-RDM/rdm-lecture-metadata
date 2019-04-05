@@ -17,17 +17,32 @@ library(tidyverse)
 
 First, let us see how this works with the `iris` data.
 
-```{r iris_data_demo}
+```{r subset iris data}
 
 # create our data set
 iris_subset <- head(iris) # we can use a small piece of iris for this demo
+```
 
-# add attributes
+We can add table-level metadata in the form of attributes to the iris_subset. As
+much as possible, we will employ the Frictionless Data Table Schema:
+https://frictionlessdata.io/specs/table-schema/
+
+```{r iris_subset table metadata}
+
 attr(iris_subset, "title") <- "the famous Iris data set" # add a title
 attr(iris_subset, "description") <- "measurements of Iris (Iris spp.) plants" # add a description
 attr(iris_subset, "format") <- "csvy" # add a (meta)data format
 ```
 
+We can also add field-level metadata, including a title and description using
+attributes. Table Schema does not support units metadata for fields but we can
+include this important metadata in the description.
+
+```{r iris_subset field metadata}
+
+attr(iris_subset$Petal.Length, "label") <- "the length of an individual petal" # label will ultimately map to title
+attr(iris_subset$Petal.Length, "description") <- "the length of an individual petal in units of millimeter" # add a description
+```
 
 How does our iris data set look (in R)?
 
@@ -65,25 +80,40 @@ stream_chem <- read_csv(file = '/home/srearl/localRepos/rdm-lecture-metadata/dat
   mutate(Date = as.Date(Date, format = "%m/%d/%Y")) # fix date field on import
 ```
 
+We can use the same approach we used with the subset of iris data for our stream chemsitry data.
 
-Add metadata to our stream chemistry data. We can add table- and field-level
-metadata. We can loosely follow the Frictionless Data Table schema:
-https://frictionlessdata.io/specs/table-schema/
+Add table-level metadata to our stream chemistry data.
 
 ```{r stream_chem_metadata}
 
-# add table attributes
 attr(stream_chem, "title") <- "stream chemistry data from southern Appalachian mountain streams, 2013" # add a title
 attr(stream_chem, "description") <- "stream chemistry data for the calculation of ecosystem metabolism collected with automated data loggers from four headwater streams in the southern Appalachian mountain region during summer 2013" # add a description
 attr(stream_chem, "format") <- "csvy" # add a (meta)data format
+```
 
-# add column attributes
+Add table-level metadata to our stream chemistry data.
+
+```{r}
+
+attr(stream_chem$site_id, "label") <- "study site identifier"
 attr(stream_chem$site_id, "description") <- "site-code: Greenbriar (GB), Stone Crop (SC), Hugh White Creek (HWC)"
+
+attr(stream_chem$K2_20, "label") <- "a metric of oxygen exchange across the air-water interface"
 attr(stream_chem$K2_20, "description") <- "oxygen reaeration coefficient (per day)"
+
+attr(stream_chem$Date, "label") <- "date of observation"
 attr(stream_chem$Date, "description") <- "date of observation (YYYY-MM-DD)"
+
+attr(stream_chem$Time, "label") <- "time of observation"
 attr(stream_chem$Time, "description") <- "time of observation (hh:mm:ss)"
+
+attr(stream_chem$Temp, "label") <- "stream water temperature"
 attr(stream_chem$Temp, "description") <- "stream water temperature (degrees Celsius)"
+
+attr(stream_chem$SpCond, "label") <- "stream water specific conductance"
 attr(stream_chem$SpCond, "description") <- "stream water specific conductance (microSiemens per centimeter)"
+
+attr(stream_chem$DO, "label") <- "stream water dissolved oxygen concentration"
 attr(stream_chem$DO, "description") <- "stream water dissolved oxygen concentration (milligrams per liter)"
 ```
 
