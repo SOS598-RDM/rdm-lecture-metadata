@@ -2,7 +2,7 @@
 title: "metadata, and data publishing"
 subtitle: FALSE
 author: FALSE
-date: "2019-04-05"
+date: "spring 2020"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -306,7 +306,6 @@ house:<br>
 .light-grey["...have a license file in the project's home directory that clearly states what license(s) apply to the project's software, data, and manuscripts. Lack of an explicit license does not mean there isn't one; rather, it implies the author is keeping all rights and others are not allowed to reuse or modify the material.] We recommend Creative Commons licenses for data and text, either CC-0 (the "No Rights Reserved" license) .light-grey[or CC-BY (the "Attribution" license, which permits sharing and reuse but requires people to give appropriate credit to the creators). For software, we recommend a permissive open source license such as the MIT, BSD, or Apache license..."]
 
 .footnote[Wilson et al. 2017 [Good enough practices in scientific computing](https://doi.org/10.1371/journal.pcbi.1005510)]
-
 
 ---
 
