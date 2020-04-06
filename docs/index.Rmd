@@ -20,10 +20,16 @@ output:
 
 .footnote[J. Bryan from http://stat545.com/]
 
-
 ---
+background-image: url('assets/figures/whypublish.png')
+background-size: 90%
 
 #### why publish data
+
+
+.footnote[[Milotić](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
+
+???
 
 * big picture
   + increasingly a requirement
@@ -31,12 +37,9 @@ output:
   
 * researcher perspective
   + papers with publicly available data receive a higher number of citations than similar studies lacking available data<sup>1</sup>
-  + data sharing is associated with higher productivity<sup>1</sup>
-  + <a href="https://portal.lternet.edu/nis/mapbrowse?packageid=knb-lter-cap.621.1" target="_blank">a citeable product</a>
+  + data sharing is associated with higher productivity
+  + a citeable product
   
-
-.footnote[<sup>1</sup>[Marwick et al. 2017](https://doi.org/10.7287/peerj.preprints.3192v1)]
-
 
 ---
 
@@ -96,7 +99,24 @@ class: inverse
 
 **"Without clear instructions, many researchers struggle to avoid chaos in their file structures, and so are understandably reluctant to expose their workflow for others to see.  This may be one of the reasons that so many requests for details about method, including requests for data and code, are turned down or go unanswered (Collberg & Proebsting 2016)."**
 
-.footnote[[Marwick et al. 2017](https://doi.org/10.7287/peerj.preprints.3192v1)]
+.footnote[[Marwick et al. 2018](https://doi.org/10.1080/00031305.2017.1375986)]
+
+
+---
+background-image: url('assets/figures/fair.png')
+background-size: 90%
+
+
+.footnote[[Milotić](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
+
+
+---
+background-image: url('assets/figures/wheretopublish.png')
+background-size: 90%
+
+#### where to publish data?
+
+.footnote[[Milotić](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
 
 
 ---
@@ -105,7 +125,7 @@ class: inverse
 
 ```{r echo=FALSE}
 dataRepo <- data.frame(
-  system = c("Google Drive", "GitHub", "University Server", "KNB*"),
+  system = c("Google Drive", "GitHub", "University Server", "Dryad"),
   `long term` = c("maybe", "yes", "maybe", "yes"),
   versioned = c("maybe", "yes", "no", "yes"),
   citable = c("no", "no", "no", "yes"),
@@ -113,18 +133,28 @@ dataRepo <- data.frame(
 )
 
 knitr::kable(dataRepo, format = "html")
+
 ```
 
-<small>
-  *KNB (the Knowledge Network for Biocomplexity) is an international repository intended to facilitate ecological and environmental research
-</small>
-
 .footnote[[NCEAS crescynt training](https://nceas.github.io/crescynt-training/)]
+
+--
+
+<br>
+
+.content-box-blue[
+**does not include**
+- Dropbox, Google Drive, etc.
+- website: personal, University
+- Academia.edu
+- LinkedIn
+- ResearchGate
+]
 
 
 ---
 
-#### where to publish?
+#### where to publish data?
 
 .center[
   <img src="assets/figures/r3data.png" width="60%">
@@ -226,23 +256,24 @@ in search and retrieval, standards provide:
 *example for a house*
 
 .less-left[
-
-house:<br>
-&nbsp;parcel_number:<br>
-&nbsp;roof:<br>
-&nbsp;&nbsp;type: shingle, shake, tile<br>
-&nbsp;&nbsp;color:<br>
-&nbsp;wall:<br>
-&nbsp;&nbsp;exterior_wall:<br>
-&nbsp;&nbsp;&nbsp;type: block, vinyl, stucco<br>
-&nbsp;&nbsp;&nbsp;color:<br>
-&nbsp;&nbsp;interior_wall:<br>
-&nbsp;&nbsp;&nbsp;color:<br>
-
+```
+house:
+  parcel_number:
+  roof:
+    type: shingle, shake,
+          tile
+    color:
+  wall:
+    exterior_wall:
+      type: block, vinyl,
+            stucco
+      color:
+    interior_wall:
+      color:
+```
 ]
 
 .more-right[
-
 ```xml
 <house>
   <parcel_number>45.658</parcel_number>

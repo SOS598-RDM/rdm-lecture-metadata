@@ -1,2 +1,5 @@
 # rdm-lecture-metadata
-presentation and materials related to metadata and publishing
+
+Presentation and materials related to metadata and publishing.
+
+[dataverse](https://demo.dataverse.org/)

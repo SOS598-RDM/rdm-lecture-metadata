@@ -24,10 +24,16 @@ class: center, middle, inverse, title-slide
 
 .footnote[J. Bryan from http://stat545.com/]
 
-
 ---
+background-image: url('assets/figures/whypublish.png')
+background-size: 90%
 
 #### why publish data
+
+
+.footnote[[Milotić](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
+
+???
 
 * big picture
   + increasingly a requirement
@@ -35,12 +41,9 @@ class: center, middle, inverse, title-slide
   
 * researcher perspective
   + papers with publicly available data receive a higher number of citations than similar studies lacking available data&lt;sup&gt;1&lt;/sup&gt;
-  + data sharing is associated with higher productivity&lt;sup&gt;1&lt;/sup&gt;
-  + &lt;a href="https://portal.lternet.edu/nis/mapbrowse?packageid=knb-lter-cap.621.1" target="_blank"&gt;a citeable product&lt;/a&gt;
+  + data sharing is associated with higher productivity
+  + a citeable product
   
-
-.footnote[&lt;sup&gt;1&lt;/sup&gt;[Marwick et al. 2017](https://doi.org/10.7287/peerj.preprints.3192v1)]
-
 
 ---
 
@@ -100,7 +103,24 @@ class: inverse
 
 **"Without clear instructions, many researchers struggle to avoid chaos in their file structures, and so are understandably reluctant to expose their workflow for others to see.  This may be one of the reasons that so many requests for details about method, including requests for data and code, are turned down or go unanswered (Collberg &amp; Proebsting 2016)."**
 
-.footnote[[Marwick et al. 2017](https://doi.org/10.7287/peerj.preprints.3192v1)]
+.footnote[[Marwick et al. 2018](https://doi.org/10.1080/00031305.2017.1375986)]
+
+
+---
+background-image: url('assets/figures/fair.png')
+background-size: 90%
+
+
+.footnote[[Milotić](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
+
+
+---
+background-image: url('assets/figures/wheretopublish.png')
+background-size: 90%
+
+#### where to publish data?
+
+.footnote[[Milotić](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
 
 
 ---
@@ -140,7 +160,7 @@ class: inverse
    &lt;td style="text-align:left;"&gt; maybe &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; KNB* &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Dryad &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; yes &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; yes &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; yes &lt;/td&gt;
@@ -149,16 +169,25 @@ class: inverse
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;small&gt;
-  *KNB (the Knowledge Network for Biocomplexity) is an international repository intended to facilitate ecological and environmental research
-&lt;/small&gt;
-
 .footnote[[NCEAS crescynt training](https://nceas.github.io/crescynt-training/)]
+
+--
+
+&lt;br&gt;
+
+.content-box-blue[
+**does not include**
+- Dropbox, Google Drive, etc.
+- website: personal, University
+- Academia.edu
+- LinkedIn
+- ResearchGate
+]
 
 
 ---
 
-#### where to publish?
+#### where to publish data?
 
 .center[
   &lt;img src="assets/figures/r3data.png" width="60%"&gt;
@@ -260,23 +289,24 @@ in search and retrieval, standards provide:
 *example for a house*
 
 .less-left[
-
-house:&lt;br&gt;
-&amp;nbsp;parcel_number:&lt;br&gt;
-&amp;nbsp;roof:&lt;br&gt;
-&amp;nbsp;&amp;nbsp;type: shingle, shake, tile&lt;br&gt;
-&amp;nbsp;&amp;nbsp;color:&lt;br&gt;
-&amp;nbsp;wall:&lt;br&gt;
-&amp;nbsp;&amp;nbsp;exterior_wall:&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;type: block, vinyl, stucco&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;color:&lt;br&gt;
-&amp;nbsp;&amp;nbsp;interior_wall:&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;color:&lt;br&gt;
-
+```
+house:
+  parcel_number:
+  roof:
+    type: shingle, shake,
+          tile
+    color:
+  wall:
+    exterior_wall:
+      type: block, vinyl,
+            stucco
+      color:
+    interior_wall:
+      color:
+```
 ]
 
 .more-right[
-
 ```xml
 &lt;house&gt;
   &lt;parcel_number&gt;45.658&lt;/parcel_number&gt;
