@@ -1,19 +1,21 @@
 ---
 title: "generate metadata"
-output: github_document
+output:
+  github_document:
+    toc: true
 editor_options:
   chunk_output_type: console
 ---
 
-We will use the csvy package to add metadata to our stream chemistry data.
-
-```{r libraries, message=FALSE}
+```{r libraries-for-csvy, message=FALSE, echo=FALSE}
 
 library(csvy)
 library(tidyverse)
 ```
 
-## Iris data demo
+## I. add metadata to tabular data as yaml with csvy
+
+#### a simple demonstration with the iris data set
 
 First, let us see how this works with the `iris` data.
 
@@ -24,8 +26,8 @@ iris_subset <- head(iris) # we can use a small piece of iris for this demo
 ```
 
 We can add table-level metadata in the form of attributes to the iris_subset. As
-much as possible, we will employ the Frictionless Data Table Schema:
-https://frictionlessdata.io/specs/table-schema/
+much as possible, we will employ the Frictionless [Data Table
+Schema](https://frictionlessdata.io/specs/table-schema/).
 
 ```{r iris_subset table metadata}
 
@@ -70,17 +72,19 @@ write_csvy(x = iris_subset,
 ```
 
 
-## Add metadata to our stream chemistry data
+#### a richer example: add metadata to our stream chemistry data
+
+Use the csvy package to add metadata to our stream chemistry data.
 
 Import our stream chemistry data
 
-```{r import_chem_data, warning=FALSE}
+```{r import-chem-data, warning=FALSE}
 
-stream_chem <- read_csv(file = '/home/srearl/localRepos/rdm-lecture-metadata/data/stream_chemistry_metabolism.csv') %>% 
-  mutate(Date = as.Date(Date, format = "%m/%d/%Y")) # fix date field on import
+stream_chem <- read_csv(file = 'stream_chemistry_metabolism.csv')
 ```
 
-We can use the same approach we used with the subset of iris data for our stream chemsitry data.
+We can use the same approach we used with the subset of iris data for our stream
+chemsitry data.
 
 Add table-level metadata to our stream chemistry data.
 
@@ -117,7 +121,6 @@ attr(stream_chem$DO, "label") <- "stream water dissolved oxygen concentration"
 attr(stream_chem$DO, "description") <- "stream water dissolved oxygen concentration (milligrams per liter)"
 ```
 
-
 Review our stream chemistry metadata
 
 * with the str() function...
@@ -144,3 +147,38 @@ write_csvy(x = stream_chem,
            row.names = F)
 ```
 
+## II. frictionless
+
+```{r libraries-for-frictionless, message=FALSE, echo=FALSE}
+
+library(tableschema.r)
+library(datapackage.r)
+library(future)
+library(jsonlite)
+```
+
+### IIa. use the frictionless web-based data package creator
+
+We can use the frictionless data package
+[creator](https://create.frictionlessdata.io/) to construct an entire data
+package. Metadata are contained in the `stream-chem-data-package.json` file in
+the `data` directory of this repository; this can be uploaded along with the
+data file `stream_chemistry_metabolism.csv` or bundled as a stand-along data
+package.
+
+### IIb. use frictionless tools to generate metadata or create a data package
+
+Load an existing schema into our R environment and display output
+
+```{r load-display-steam-chem-json, echo=FALSE}
+
+# note that the full path to the file is required for Package.load
+
+streamChemPackage <- Package.load('/home/srearl/localRepos/rdm-lecture-metadata/data/stream-chem-data-package.json')
+toJSON(streamChemPackage$descriptor, pretty = T)
+```
+
+
+## III. include metadata in a well-constructed README
+
+[Wall et al. 2017](https://datadryad.org/stash/dataset/doi:10.5061/dryad.5vg70)

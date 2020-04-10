@@ -13,7 +13,6 @@ output:
       countIncrementalSlides: false
 ---
 
-
 #### research data workflow: this is your world (or it will be soon) - .light-blue[now add to that publishing your data and code]
 
 <img src="assets/figures/workflow_with_data.png" width="100%">
@@ -54,6 +53,29 @@ background-size: 90%
 
 .footnote[[NCEAS crescynt training](https://nceas.github.io/crescynt-training/)]
 
+
+---
+
+.pull-left[
+  <img src="assets/figures/covid19.png" width="100%">
+]
+
+.pull-right[
+
+<small>
+  Several researchers have apparently asked to see Imperial's calculations, but
+  Prof. Neil Ferguson, the man leading the team, has said that <mark>the
+  computer code is 13 years old and thousands of lines of it "undocumented,"
+  making it hard for anyone to work with, let alone take it apart to identify
+  potential errors</mark>. He has promised that it will be published in a week
+  or so, but in the meantime reasonable people might wonder whether something
+  made with 13-year-old, undocumented computer code should be used to justify
+  shutting down the economy. Meanwhile, the authors of the Oxford model have
+  promised that their code will be published "as soon as possible."
+</small>
+]
+
+.footnote[[Wall Street Journal](https://www.wsj.com/articles/coronavirus-lessons-from-the-asteroid-that-didnt-hit-earth-11585780465)]
 
 ---
 
@@ -106,55 +128,30 @@ class: inverse
 background-image: url('assets/figures/fair.png')
 background-size: 90%
 
-
 .footnote[[Milotić](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
 
 
 ---
-background-image: url('assets/figures/wheretopublish.png')
-background-size: 90%
 
 #### where to publish data?
 
-.footnote[[Milotić](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
+data repository: long-term | versioned | citeable | discoverable
 
-
----
-
-#### what do we mean by data repository?
-
-```{r echo=FALSE}
-dataRepo <- data.frame(
-  system = c("Google Drive", "GitHub", "University Server", "Dryad"),
-  `long term` = c("maybe", "yes", "maybe", "yes"),
-  versioned = c("maybe", "yes", "no", "yes"),
-  citable = c("no", "no", "no", "yes"),
-  discoverable = c("no", "no", "maybe", "yes")
-)
-
-knitr::kable(dataRepo, format = "html")
-
-```
-
-.footnote[[NCEAS crescynt training](https://nceas.github.io/crescynt-training/)]
-
---
-
-<br>
-
-.content-box-blue[
-**does not include**
-- Dropbox, Google Drive, etc.
-- website: personal, University
-- Academia.edu
-- LinkedIn
-- ResearchGate
+.center[
+  <img src="assets/figures/wheretopublish.png" width="100%">
 ]
 
+`r emo::ji("prohibited")`: Dropbox | Google Drive | LinkedIn | ResearchGate | websites | etc.
+
+.footnote[[Milotić](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
+
 
 ---
 
 #### where to publish data?
+
+<br>
+<br>
 
 .center[
   <img src="assets/figures/r3data.png" width="60%">
@@ -175,7 +172,7 @@ class: inverse
 
 **"data without the contextual information needed to interpret it (and ultimately reproduce the results) is useless"**
 
-.footnote[Metadata for Research Data by Brianna Marshall]
+.footnote[[Metadata for Research Data by Brianna Marshall](https://speakerdeck.com/bmarshall/metadata-for-research-data)]
 
 
 ---
@@ -195,7 +192,7 @@ class: inverse
 - technical information on files
 - data collection instruments
 
-.footnote[Metadata for Research Data by Brianna Marshall]
+.footnote[[Metadata for Research Data by Brianna Marshall](https://speakerdeck.com/bmarshall/metadata-for-research-data)]
 
 
 ---

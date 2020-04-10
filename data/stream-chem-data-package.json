@@ -1,0 +1,82 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "stream-chemistry-southern-appalachian-mountain-streams-2013",
+      "path": "stream_chemistry_metabolism.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "site_id",
+            "type": "string",
+            "format": "default",
+            "title": "study site identifier",
+            "description": "site-code: Greenbriar (GB), Stone Crop (SC)"
+          },
+          {
+            "name": "K2_20",
+            "type": "number",
+            "format": "default",
+            "title": "a metric of oxygen exchange across the air-water interface",
+            "description": "a metric of oxygen exchange across the air-water interface"
+          },
+          {
+            "name": "Date",
+            "type": "date",
+            "format": "default",
+            "title": "date of observation",
+            "description": "date of observation (YYYY-MM-DD)"
+          },
+          {
+            "name": "Time",
+            "type": "time",
+            "format": "default",
+            "title": "time of observation",
+            "description": "time of observation (hh:mm:ss)"
+          },
+          {
+            "name": "Temp",
+            "type": "number",
+            "format": "default",
+            "title": "stream water temperature",
+            "description": "stream water temperature (degrees Celsius)"
+          },
+          {
+            "name": "SpCond",
+            "type": "number",
+            "format": "default",
+            "title": "stream water specific conductance",
+            "description": "stream water specific conductance (microSiemens per centimeter)"
+          },
+          {
+            "name": "DO",
+            "type": "integer",
+            "format": "default",
+            "title": "stream water dissolved oxygen concentration",
+            "description": "stream water dissolved oxygen concentration (milligrams per liter)"
+          }
+        ]
+      },
+      "title": "stream chemistry data from southern Appalachian mountain streams, 2013",
+      "description": "stream chemistry data for the calculation of ecosystem metabolism collected with automated data loggers from two headwater streams in the southern Appalachian mountain region during summer 2013",
+      "format": "csv"
+    }
+  ],
+  "title": "High-frequency water-quality measurements for metabolic analyses from stream in the Newport, Virginia area, 2003",
+  "name": "appalachian-mountain-stream-study",
+  "description": "Stream chemistry data for the calculation of ecosystem metabolism collected with automated data loggers from two headwater streams in the southern Appalachian mountain region during summer 2013.",
+  "contributors": [
+    {
+      "title": "John T. Chance",
+      "role": "author"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "title": "CC0 1.0",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ]
+}
