@@ -53,29 +53,9 @@ background-size: 90%
 
 .footnote[[NCEAS crescynt training](https://nceas.github.io/crescynt-training/)]
 
+???
 
----
-
-.pull-left[
-  <img src="assets/figures/covid19.png" width="100%">
-]
-
-.pull-right[
-
-<small>
-  Several researchers have apparently asked to see Imperial's calculations, but
-  Prof. Neil Ferguson, the man leading the team, has said that <mark>the
-  computer code is 13 years old and thousands of lines of it "undocumented,"
-  making it hard for anyone to work with, let alone take it apart to identify
-  potential errors</mark>. He has promised that it will be published in a week
-  or so, but in the meantime reasonable people might wonder whether something
-  made with 13-year-old, undocumented computer code should be used to justify
-  shutting down the economy. Meanwhile, the authors of the Oxford model have
-  promised that their code will be published "as soon as possible."
-</small>
-]
-
-.footnote[[Wall Street Journal](https://www.wsj.com/articles/coronavirus-lessons-from-the-asteroid-that-didnt-hit-earth-11585780465)]
+#### climategate
 
 ---
 
@@ -123,6 +103,36 @@ class: inverse
 
 .footnote[[Marwick et al. 2018](https://doi.org/10.1080/00031305.2017.1375986)]
 
+???
+
+#### avoid chaos
+
+---
+
+.pull-left[
+  <img src="assets/figures/covid19.png" width="100%">
+]
+
+.pull-right[
+
+<small>
+  Several researchers have apparently asked to see Imperial's calculations, but
+  Prof. Neil Ferguson, the man leading the team, has said that <mark>the
+  computer code is 13 years old and thousands of lines of it "undocumented,"
+  making it hard for anyone to work with, let alone take it apart to identify
+  potential errors</mark>. He has promised that it will be published in a week
+  or so, but in the meantime reasonable people might wonder whether something
+  made with 13-year-old, undocumented computer code should be used to justify
+  shutting down the economy. Meanwhile, the authors of the Oxford model have
+  promised that their code will be published "as soon as possible."
+</small>
+]
+
+.footnote[[Wall Street Journal](https://www.wsj.com/articles/coronavirus-lessons-from-the-asteroid-that-didnt-hit-earth-11585780465)]
+
+???
+
+#### covid19
 
 ---
 background-image: url('assets/figures/fair.png')
@@ -130,6 +140,9 @@ background-size: 90%
 
 .footnote[[Milotić](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
 
+???
+
+#### FAIR
 
 ---
 
@@ -174,6 +187,10 @@ class: inverse
 
 .footnote[[Metadata for Research Data by Brianna Marshall](https://speakerdeck.com/bmarshall/metadata-for-research-data)]
 
+
+???
+
+#### context is essential
 
 ---
 
@@ -248,7 +265,7 @@ in search and retrieval, standards provide:
 
 ---
 
-#### metadata standards: a blueprint
+#### metadata standards: blueprint (for a house)
 
 *example for a house*
 
@@ -294,7 +311,7 @@ house:
 
 ---
 
-#### metadata standards: a blueprint
+#### metadata standards: blueprint (for a plant feature)
 
 *example for ecological data*
 
