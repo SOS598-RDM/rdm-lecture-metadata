@@ -1,8 +1,8 @@
 ---
-title: "metadata, and data publishing"
+title: "metadata"
 subtitle: FALSE
 author: FALSE
-date: "spring 2020"
+date: FALSE
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -13,188 +13,20 @@ output:
       countIncrementalSlides: false
 ---
 
-#### research data workflow: this is your world (or it will be soon) - .light-blue[now add to that publishing your data and code]
-
-<img src="assets/figures/workflow_with_data.png" width="100%">
-
-.footnote[J. Bryan from http://stat545.com/]
-
----
-background-image: url('assets/figures/whypublish.png')
-background-size: 90%
-
-#### why publish data
-
-
-.footnote[[Milotić](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
-
-???
-
-* big picture
-  + increasingly a requirement
-  + advancement of science
-  
-* researcher perspective
-  + papers with publicly available data receive a higher number of citations than similar studies lacking available data<sup>1</sup>
-  + data sharing is associated with higher productivity
-  + a citeable product
-  
-
----
-
-.pull-left[
-  <img src="assets/figures/ClimateGate.png" width="100%">
-]
-
-.pull-right[
-
-"The climate scientists at the centre of a media storm over leaked emails were yesterday cleared of accusations that they fudged their results and silenced critics, but a review found they had failed to be open enough about their work."
-]
-
-.footnote[[NCEAS crescynt training](https://nceas.github.io/crescynt-training/)]
-
-???
-
-#### climategate
-
----
-
-#### concerns about sharing data
-
-most common concerns can be addressed *with metadata*
-
-.pull-left[
-.center[**concern**]
-
-<hr>
-
-* inappropriate use due to misunderstanding of research purpose or parameters
-
-* security and confidentiality of sensitive data
-
-* lack of acknowledgement / credit
-
-]
-
-.pull-right[
-.center[**solution**]
-
-<hr>
-
-* provide rich abstract, purpose, use constraints, and supplemental information
-
-* use constraints to specify who may access the data and how
-
-* specify a required data citation within the use constraints
-
-]
-
-.footnote[[DataONE](https://www.dataone.org/education-modules)]
-
-
----
-class: inverse
-
-<br>
-<br>
-<br>
-
-**"Without clear instructions, many researchers struggle to avoid chaos in their file structures, and so are understandably reluctant to expose their workflow for others to see.  This may be one of the reasons that so many requests for details about method, including requests for data and code, are turned down or go unanswered (Collberg & Proebsting 2016)."**
-
-.footnote[[Marwick et al. 2018](https://doi.org/10.1080/00031305.2017.1375986)]
-
-???
-
-#### avoid chaos
-
----
-
-.pull-left[
-  <img src="assets/figures/covid19.png" width="100%">
-]
-
-.pull-right[
-
-<small>
-  Several researchers have apparently asked to see Imperial's calculations, but
-  Prof. Neil Ferguson, the man leading the team, has said that <mark>the
-  computer code is 13 years old and thousands of lines of it "undocumented,"
-  making it hard for anyone to work with, let alone take it apart to identify
-  potential errors</mark>. He has promised that it will be published in a week
-  or so, but in the meantime reasonable people might wonder whether something
-  made with 13-year-old, undocumented computer code should be used to justify
-  shutting down the economy. Meanwhile, the authors of the Oxford model have
-  promised that their code will be published "as soon as possible."
-</small>
-]
-
-.footnote[[Wall Street Journal](https://www.wsj.com/articles/coronavirus-lessons-from-the-asteroid-that-didnt-hit-earth-11585780465)]
-
-???
-
-#### covid19
-
----
-background-image: url('assets/figures/fair.png')
-background-size: 90%
-
-.footnote[[Milotić](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
-
-???
-
-#### FAIR
-
----
-
-#### where to publish data?
-
-data repository: long-term | versioned | citeable | discoverable
-
-.center[
-  <img src="assets/figures/wheretopublish.png" width="100%">
-]
-
-`r emo::ji("prohibited")`: Dropbox | Google Drive | LinkedIn | ResearchGate | websites | etc.
-
-.footnote[[Milotić](https://speakerdeck.com/milotictanja/good-enough-practices-in-data-management)]
-
-
----
-
-#### where to publish data?
-
-<br>
-<br>
-
-.center[
-  <img src="assets/figures/r3data.png" width="60%">
-]
-
-is awesome but I would start with...
-* institutional resources
-* lab, colleagues
-* conferences
-
-
----
-class: inverse
-
-<br>
-<br>
-<br>
+class: inverse, middle
 
 **"data without the contextual information needed to interpret it (and ultimately reproduce the results) is useless"**
 
-.footnote[[Metadata for Research Data by Brianna Marshall](https://speakerdeck.com/bmarshall/metadata-for-research-data)]
+.footnote[B. Marshall [*Metadata for Research Data*](https://speakerdeck.com/bmarshall/metadata-for-research-data)]
 
 
 ???
 
-#### context is essential
+# context is essential
 
 ---
 
-#### metadata: the who, what, why, where, when
+**metadata: the who, what, why, where, when**
 
 - principal investigator
 - funding sources
@@ -209,12 +41,15 @@ class: inverse
 - technical information on files
 - data collection instruments
 
-.footnote[[Metadata for Research Data by Brianna Marshall](https://speakerdeck.com/bmarshall/metadata-for-research-data)]
+.footnote[B. Marshall [*Metadata for Research Data*](https://speakerdeck.com/bmarshall/metadata-for-research-data)]
 
+???
+
+# metadata: the who, what, why, where, when
 
 ---
 
-#### what makes good metatadata?
+**what makes good metatadata?**
 
 - consistency with commonly used fields, e.g., YYYY-MM-DD
 - use a standard vocubulary
@@ -234,27 +69,40 @@ class: inverse
 
 .footnote[[DataONE](https://www.dataone.org/education-modules)]
 
+???
+
+# what makes good metatadata?
 
 ---
 
-#### a special note about titles
+**a special note about titles**
+
+<br>
+<br>
+<br>
 
 .center[
   <img src="assets/figures/recently_added_titles.png" width="100%">
 ]
 
+???
+
+# titles
+
 
 ---
 
-#### metadata standards: what is a standard?
+**metadata standards: what is a standard?**
 
 standards provides a structure to describe data with:
+
 - common terms to allow consistency between records
 - common definitions for easier interpretation
 - common language for ease of communication
 - common structure to quickly locate information
 
 in search and retrieval, standards provide:
+
 - documentation structure in a reliable and predictable format for computer interpretation
 - a uniform summary description of the dataset
 
@@ -262,10 +110,13 @@ in search and retrieval, standards provide:
 
 .footnote[[DataONE](https://www.dataone.org/education-modules)]
 
+???
+
+# metadata standards: definition
 
 ---
 
-#### metadata standards: blueprint (for a house)
+**metadata standards: blueprint (for a house)**
 
 *example for a house*
 
@@ -308,10 +159,13 @@ house:
 ```
 ]
 
+???
+
+# metadata standards: house example
 
 ---
 
-#### metadata standards: blueprint (for a plant feature)
+**metadata standards: blueprint (for a plant feature)**
 
 *example for ecological data*
 
@@ -337,27 +191,18 @@ house:
 </attribute>
 ```
 
+???
+
+# metadata standards: plant example
+
 ---
 
-#### metadata standards: there are a lot
+**metadata standards: there are a lot**
+
+<br>
 
 <img src="assets/figures/metadata_standards_list.png" width="100%">
 
+???
 
----
-
-#### license
-
-.light-grey["...have a license file in the project's home directory that clearly states what license(s) apply to the project's software, data, and manuscripts. Lack of an explicit license does not mean there isn't one; rather, it implies the author is keeping all rights and others are not allowed to reuse or modify the material.] We recommend Creative Commons licenses for data and text, either CC-0 (the "No Rights Reserved" license) .light-grey[or CC-BY (the "Attribution" license, which permits sharing and reuse but requires people to give appropriate credit to the creators). For software, we recommend a permissive open source license such as the MIT, BSD, or Apache license..."]
-
-.footnote[Wilson et al. 2017 [Good enough practices in scientific computing](https://doi.org/10.1371/journal.pcbi.1005510)]
-
----
-
-#### orcid
-
-.center[
-  <img src="assets/figures/orcid.png" width="50%">
-]
-
-[orcid.org](https://orcid.org/)
+# metadata standards: many
