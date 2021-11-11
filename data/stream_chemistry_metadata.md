@@ -345,6 +345,9 @@ Except for csvy, we can use similar approaches to documenting non-tabular data. 
 
 
 
+<img src="syc_ss_mapview.png" alt="sycamore_creek_catchment">
+
+
 The corresponding metadata generated from frictionless is displayed below.
 
 
