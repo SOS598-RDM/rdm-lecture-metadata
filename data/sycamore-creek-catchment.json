@@ -1,0 +1,29 @@
+{
+  "profile": "data-package",
+  "resources": [
+    {
+      "name": "sycamorecreekwatershed",
+      "path": "syc_ss_mapview.png",
+      "profile": "data-resource",
+      "schema": {},
+      "title": "Sycamore_Creek_watershed",
+      "format": "png"
+    }
+  ],
+  "keywords": [
+    "desert",
+    "sonoran",
+    "stream",
+    "arizona"
+  ],
+  "name": "sycamorecreekwatershed",
+  "title": "Sycamore Creek, AZ watershed above Dos S Ranch",
+  "description": "Watershed of Sycamore Creek, AZ above the Dos S Ranch",
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "title": "CC0 1.0",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ]
+}
