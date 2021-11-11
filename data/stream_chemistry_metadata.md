@@ -16,8 +16,8 @@ We will look at three ways to generate metadata for tabular data resources to in
 
 Finally, we consider providing metadata regarding non-tabular and spatial data
 
-- [non-tabular](https://github.com/SOS598-RDM/rdm-lecture-metadata/blob/master/data/stream_chemistry_metadata.md#ii-frictionless)
-- [spatial data](https://github.com/SOS598-RDM/rdm-lecture-metadata/blob/master/data/stream_chemistry_metadata.md#ii-frictionless)
+- [non-tabular](https://github.com/SOS598-RDM/rdm-lecture-metadata/blob/master/data/stream_chemistry_metadata.md#iv-non-tabular-data)
+- [spatial data](https://github.com/SOS598-RDM/rdm-lecture-metadata/blob/master/data/stream_chemistry_metadata.md#v-non-tabular-data-spatial-data)
 
 ## II. add metadata to tabular data as yaml with csvy
 
@@ -341,12 +341,9 @@ Another less technical, though not necessarily less effective, approach is to si
 
 ## IV. non-tabular data
 
-Except for csvy, we can use similar approaches to documenting non-tabular data. For example, we could use the [frictionless data package creator](https://create.frictionlessdata.io/) to generate metadata for an image.
-
-
+Except for csvy, we can use similar approaches to documenting non-tabular data. For example, we could use the [frictionless data package creator](https://create.frictionlessdata.io/) to generate metadata for the image of the catchment above the Dos S Ranch along Sycamore Creek in central Arizona.
 
 <img src="syc_ss_mapview.png" alt="sycamore_creek_catchment">
-
 
 The corresponding metadata generated from frictionless is displayed below.
 
