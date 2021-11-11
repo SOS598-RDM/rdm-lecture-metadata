@@ -176,14 +176,9 @@ Another less technical, though not necessarily less effective, approach is to si
 
 ## IV. non-tabular data
 
-Except for csvy, we can use similar approaches to documenting non-tabular data. For example, we could use the [frictionless data package creator](https://create.frictionlessdata.io/) to generate metadata for an image.
-
-```{r load-sycamore-creek-catchment-png, eval=TRUE, include=FALSE}
-knitr::include_graphics("syc_ss_mapview.png")
-```
+Except for csvy, we can use similar approaches to documenting non-tabular data. For example, we could use the [frictionless data package creator](https://create.frictionlessdata.io/) to generate metadata for the image of the catchment above the Dos S Ranch along Sycamore Creek in central Arizona.
 
 <img src="syc_ss_mapview.png" alt="sycamore_creek_catchment">
-
 
 The corresponding metadata generated from frictionless is displayed below.
 
