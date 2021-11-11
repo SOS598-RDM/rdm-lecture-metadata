@@ -1,0 +1,54 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.22.0-Białowieża">
+  <identifier>/home/srearl/Desktop/gis/archive/new_mexico_ws.geojson</identifier>
+  <parentidentifier></parentidentifier>
+  <language></language>
+  <type>dataset</type>
+  <title>New Mexico, USA catchments delineated using the USGS StreamStats tool based on the position of sampling points along headwater streams</title>
+  <abstract>Spatial layer detailing the position and extend of catchments corresponding to sampling locations in several headwater streams of norther New Mexico, USA. Catchments were delineated using a modified version of the USGS StreamStats package.</abstract>
+  <keywords vocabulary="gmd:topicCategory">
+    <keyword>Environment</keyword>
+    <keyword>Inland Waters</keyword>
+  </keywords>
+  <keywords vocabulary="place">
+    <keyword>new mexico</keyword>
+  </keywords>
+  <keywords vocabulary="theme">
+    <keyword>headwater stream</keyword>
+  </keywords>
+  <contact>
+    <name>Mike Trico</name>
+    <organization>Sunday Night Football</organization>
+    <position>analyst and commentator</position>
+    <voice>555.555.5555</voice>
+    <fax>555.555.5555</fax>
+    <email>miket@nbc.com</email>
+    <role>owner</role>
+  </contact>
+  <links/>
+  <fees></fees>
+  <license>Creative Commons CC Zero</license>
+  <encoding></encoding>
+  <crs>
+    <spatialrefsys>
+      <wkt>GEOGCRS["NAD83",DATUM["North American Datum 1983",ELLIPSOID["GRS 1980",6378137,298.257222101,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["unknown"],AREA["North America - NAD83"],BBOX[14.92,167.65,86.46,-47.74]],ID["EPSG",4269]]</wkt>
+      <proj4>+proj=longlat +datum=NAD83 +no_defs</proj4>
+      <srsid>3401</srsid>
+      <srid>4269</srid>
+      <authid>EPSG:4269</authid>
+      <description>NAD83</description>
+      <projectionacronym>longlat</projectionacronym>
+      <ellipsoidacronym>EPSG:7019</ellipsoidacronym>
+      <geographicflag>true</geographicflag>
+    </spatialrefsys>
+  </crs>
+  <extent>
+    <spatial crs="EPSG:4269" minz="0" miny="35.83109999999999928" dimensions="2" maxz="0" maxx="-106.39010000000000389" maxy="36.01979999999999649" minx="-106.62069999999999936"/>
+    <temporal>
+      <period>
+        <start>2021-11-01T07:00:00Z</start>
+        <end>2021-11-02T07:00:00Z</end>
+      </period>
+    </temporal>
+  </extent>
+</qgis>
