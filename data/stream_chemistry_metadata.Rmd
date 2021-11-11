@@ -178,9 +178,8 @@ Another less technical, though not necessarily less effective, approach is to si
 
 Except for csvy, we can use similar approaches to documenting non-tabular data. For example, we could use the [frictionless data package creator](https://create.frictionlessdata.io/) to generate metadata for an image.
 
-```r
+```{r load-sycamore-creek-catchment-png, eval=TRUE, include=FALSE}
 knitr::include_graphics("syc_ss_mapview.png")
-# knitr::include_graphics("syc_ss_mapview.png", fig.cap = "Catchment above Dos S Ranch on Sycamore Creek, AZ")
 ```
 
 The corresponding metadata generated from frictionless is displayed below.
@@ -195,12 +194,9 @@ jsonlite::toJSON(sycamore_creek_catchment$descriptor, pretty = T)
 
 Common packages for working with spatial data, such as QGIS and ArcGIS, have their own tools for generating metadata. These metadata can be embedded in the spatial resource, such that the data file includes both the spatial data and corresponding metadata. This can be good and bad. On one hand, it is convenient and efficient to have both data and metadata in one file resource but, on the other, this means that it is possible that the software used to generate the resource (e.g., ArcGIS) is the only way to access one or both components.
 
-If this is a concern, and it is something that the data provider should consider, the spatial data can be provided in an open format, such as kml or geojson, with the metadata generated separately. For example, below are the first few lines of the file `headwater_catchments_new_mexico.qmd` that includes metadata corresponding to the `new_mexico_ws.geojson` spatial data file in our `data` directory. `headwater_catchments_new_mexico.qmd` was generated in QGIS, hence the `qmd` extension, but this is a plain-text format that is easily accessible.
+If this is a concern, and it is something that the data provider should consider, the spatial data can be provided in an open format, such as kml or geojson, with the metadata generated separately. For example, below are the first few lines of the file `headwater_catchments_new_mexico.qmd` that includes metadata corresponding to the `new_mexico_ws.geojson` spatial data file in our `data` directory. `headwater_catchments_new_mexico.qmd` was generated in QGIS, hence the `qmd` extension, but this is a plain-text format that is readily accessible.
 
 ```{r , eval=TRUE}
 
-readLines(
-  con = "headwater_catchments_new_mexico.qmd",
-  n = 10
-)
+readLines("headwater_catchments_new_mexico.qmd")
 ```
