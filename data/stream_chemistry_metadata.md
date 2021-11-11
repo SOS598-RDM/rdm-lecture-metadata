@@ -2,9 +2,6 @@
 title: "generating metadata for tabular data resources"
 output:
   github_document:
-    toc: true
-editor_options:
-  chunk_output_type: console
 ---
 
 ## I. overview
@@ -347,7 +344,8 @@ Another less technical, though not necessarily less effective, approach is to si
 Except for csvy, we can use similar approaches to documenting non-tabular data. For example, we could use the [frictionless data package creator](https://create.frictionlessdata.io/) to generate metadata for an image.
 
 ```r
-knitr::include_graphics("syc_ss_mapview.png", fig.cap = "Catchment above Dos S Ranch on Sycamore Creek, AZ")
+knitr::include_graphics("syc_ss_mapview.png")
+# knitr::include_graphics("syc_ss_mapview.png", fig.cap = "Catchment above Dos S Ranch on Sycamore Creek, AZ")
 ```
 
 The corresponding metadata generated from frictionless is displayed below.
@@ -400,12 +398,20 @@ If this is a concern, and it is something that the data provider should consider
 
 ```r
 readLines(
-  con = "new_mexico_ws.geojson",
   con = "headwater_catchments_new_mexico.qmd",
   n = 10
 )
 ```
 
 ```
-## Error in readLines(con = "new_mexico_ws.geojson", con = "headwater_catchments_new_mexico.qmd", : formal argument "con" matched by multiple actual arguments
+##  [1] "<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>"                                                                                                                                                                                                            
+##  [2] "<qgis version=\"3.22.0-Białowieża\">"                                                                                                                                                                                                                                  
+##  [3] "  <identifier>/home/srearl/Desktop/gis/archive/new_mexico_ws.geojson</identifier>"                                                                                                                                                                                     
+##  [4] "  <parentidentifier></parentidentifier>"                                                                                                                                                                                                                               
+##  [5] "  <language></language>"                                                                                                                                                                                                                                               
+##  [6] "  <type>dataset</type>"                                                                                                                                                                                                                                                
+##  [7] "  <title>New Mexico, USA catchments delineated using the USGS StreamStats tool based on the position of sampling points along headwater streams</title>"                                                                                                               
+##  [8] "  <abstract>Spatial layer detailing the position and extend of catchments corresponding to sampling locations in several headwater streams of norther New Mexico, USA. Catchments were delineated using a modified version of the USGS StreamStats package.</abstract>"
+##  [9] "  <keywords vocabulary=\"gmd:topicCategory\">"                                                                                                                                                                                                                         
+## [10] "    <keyword>Environment</keyword>"
 ```
