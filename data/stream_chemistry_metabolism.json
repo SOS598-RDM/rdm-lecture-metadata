@@ -1,0 +1,83 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "stream_chemistry_metabolism",
+      "path": "stream_chemistry_metabolism.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "site_id",
+            "type": "string",
+            "format": "default",
+            "title": "study site identifier",
+            "description": "site-code: Greenbriar (GB), Stone Crop (SC)"
+          },
+          {
+            "name": "K2_20",
+            "type": "number",
+            "format": "default",
+            "title": "a metric of oxygen exchange across the air-water interface",
+            "description": "a metric of oxygen exchange across the air-water interface"
+          },
+          {
+            "name": "Date",
+            "type": "date",
+            "format": "default",
+            "title": "date of observation",
+            "description": "date of observation (YYYY-MM-DD)"
+          },
+          {
+            "name": "Time",
+            "type": "time",
+            "format": "default",
+            "title": "time of observation",
+            "description": "time of observation (hh:mm:ss)"
+          },
+          {
+            "name": "Temp",
+            "type": "number",
+            "format": "default",
+            "title": "stream water temperature",
+            "description": "stream water temperature (degrees Celsius)"
+          },
+          {
+            "name": "SpCond",
+            "type": "number",
+            "format": "default",
+            "title": "stream water specific conductance",
+            "description": "stream water specific conductance (microSiemens per centimeter)"
+          },
+          {
+            "name": "DO",
+            "type": "integer",
+            "format": "default",
+            "title": "stream water dissolved oxygen concentration",
+            "description": "stream water dissolved oxygen concentration (milligrams per liter)"
+          }
+        ]
+      },
+      "title": "stream chemistry data from southern Appalachian mountain streams, 2013",
+      "description": "stream chemistry data for the calculation of ecosystem metabolism collected with automated data loggers from two headwater streams in the southern Appalachian mountain region during summer 2013",
+      "format": "csv"
+    }
+  ],
+  "title": "Relationships among ecosystem structure and function: metabolic activity of headwater streams spanning a gradient of ambient nitrogen concentration",
+  "name": "stream_chemistry_metabolism",
+  "description": "Metadata for the stream_chemistry_metabolism.csv data file that is part of the Relationships among ecosystem structure and function: metabolic activity of headwater streams spanning a gradient of ambient nitrogen concentration data package.",
+  "contributors": [
+    {
+      "title": "S. R. Earl",
+      "role": "author"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "title": "CC0 1.0",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ],
+  "homepage": "https://doi.org/10.70122/FK2/AFI5KX"
+}
