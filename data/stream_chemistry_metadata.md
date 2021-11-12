@@ -1,10 +1,12 @@
 ---
-title: "generating metadata for tabular data resources"
+title: FALSE
 output:
   github_document:
 ---
 
-## I. overview
+## generating metadata for tabular and non-tabular data resources
+
+### I. overview
 
 One of the challenges with many data repositories is the limited capacity to provide detailed metadata about data resources. A good example of this are repositories that employ the [Dublin Core](https://dublincore.org/) metadata schema. The Dublin Core schema is rich and versatile, hence why it is very widely adopted by repositories, but provides mostly for metadata about a study or dataset generally with limited capacity to describe data resources, such as tables, images, or spatial data.
 
@@ -19,7 +21,7 @@ Finally, we consider providing metadata regarding non-tabular and spatial data
 - [non-tabular](https://github.com/SOS598-RDM/rdm-lecture-metadata/blob/master/data/stream_chemistry_metadata.md#iv-non-tabular-data)
 - [spatial data](https://github.com/SOS598-RDM/rdm-lecture-metadata/blob/master/data/stream_chemistry_metadata.md#v-non-tabular-data-spatial-data)
 
-## II. add metadata to tabular data as yaml with csvy
+### II. add metadata to tabular data as yaml with csvy
 
 We can use the [csvy](https://github.com/leeper/csvy) R package to add metadata to a tabular resource. The output is a modified version of our tabular resource with metadata about the resource included as yaml embedded within the resource itself.
 
@@ -107,6 +109,8 @@ csvy::write_csvy(
   comment_header = F
 )
 ```
+
+***
 
 #### a richer example: add metadata to our stream chemistry data
 
@@ -230,13 +234,13 @@ csvy::write_csvy(
 )
 ```
 
-## II. frictionless
+### II. frictionless
 
-### a. use the frictionless web-based data package creator
+#### a. use the frictionless web-based data package creator
 
 We can use the frictionless data package [creator](https://create.frictionlessdata.io/) to construct an entire data package. Metadata are contained in the `stream-chem-data-package.json` file in the `data` directory of this repository; this can be uploaded along with the data file `stream_chemistry_metabolism.csv` or bundled as a stand-alone data package.
 
-### b. use frictionless tools to generate metadata or create a data package
+#### b. use frictionless tools to generate metadata or create a data package
 
 Load an existing schema into our R environment and display output. Note that the full path to the file is required for Package.load hence use of the call to `here`.
 
@@ -335,11 +339,11 @@ jsonlite::toJSON(streamChemPackage$descriptor, pretty = T)
 ## }
 ```
 
-## III. include metadata in a well-constructed README
+### III. include metadata in a well-constructed README
 
 Another less technical, though not necessarily less effective, approach is to simply document the details of a data resource in a document. A good example of such documentation is a study by [Wall et al. 2017](https://datadryad.org/stash/dataset/doi:10.5061/dryad.5vg70) that is in the Dryad repository. Note that Wall et al. provide details of the data tables by describing the content of those tables in corresponding .docx files. docx is *definitely* not the best medium for such documentation, plain text is most appropriate, but the documentation is thorough and understandable.
 
-## IV. non-tabular data
+### IV. non-tabular data
 
 Except for csvy, we can use similar approaches to documenting non-tabular data. For example, we could use the [frictionless data package creator](https://create.frictionlessdata.io/) to generate metadata for the image of the catchment above the Dos S Ranch along Sycamore Creek in central Arizona.
 
@@ -386,7 +390,7 @@ jsonlite::toJSON(sycamore_creek_catchment$descriptor, pretty = T)
 ## }
 ```
 
-## V. non-tabular data: spatial data
+### V. non-tabular data: spatial data
 
 Common packages for working with spatial data, such as QGIS and ArcGIS, have their own tools for generating metadata. These metadata can be embedded in the spatial resource, such that the data file includes both the spatial data and corresponding metadata. This can be good and bad. On one hand, it is convenient and efficient to have both data and metadata in one file resource but, on the other, this means that it is possible that the software used to generate the resource (e.g., ArcGIS) is the only way to access one or both components.
 
